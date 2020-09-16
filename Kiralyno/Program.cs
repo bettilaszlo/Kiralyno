@@ -25,7 +25,6 @@ namespace Kiralyno
         public void Megjelenit()
         {
 
-
         }
         public Tabla(char ch)
         {
@@ -39,7 +38,6 @@ namespace Kiralyno
                     T[i, j] = UresCella;
                 }
             }
-
         }
 
         public int UresOszlop()
@@ -51,12 +49,24 @@ namespace Kiralyno
         {
             return 0;
         }
-
     }
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Királynők feladat");
+            Tabla t = new Tabla('#');
+
+            Console.WriteLine("Üres tábla:");
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    Console.WriteLine($"{T[i,j]} ");
+                }
+                Console.WriteLine();
+            }
+            t.Megjelenit();
 
             Console.ReadKey();
 
