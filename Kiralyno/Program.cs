@@ -9,7 +9,7 @@ namespace Kiralyno
 {
     class Tabla
     {
-        private char[,] tomb = new char[8,8]; 
+        private char[,] T = new char[8,8]; 
         private char UresCella;
         private int UresOszlopokSzama;
         private int UresSorokSzama;
