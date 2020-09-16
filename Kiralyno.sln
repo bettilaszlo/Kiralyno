@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kiralyno", "Kiralyno\Kiralyno.csproj", "{56F92DDD-1B20-4B10-AF95-C60E59DDAABC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56F92DDD-1B20-4B10-AF95-C60E59DDAABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F92DDD-1B20-4B10-AF95-C60E59DDAABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F92DDD-1B20-4B10-AF95-C60E59DDAABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F92DDD-1B20-4B10-AF95-C60E59DDAABC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D16DD673-7AD7-478E-8C15-F834C445EC68}
+	EndGlobalSection
+EndGlobal
