@@ -14,7 +14,7 @@ namespace Kiralyno
         private int UresOszlopokSzama;
         private int UresSorokSzama;
 
-        public void Elhelyez()
+        public void Elhelyez(int N)
         {
             //1. véletlen helyiérték létrehozása:
             //      - Random osztály érték készlete: [0,7]
@@ -23,16 +23,20 @@ namespace Kiralyno
             //                 HA üres ---> "#"
 
             Random vel = new Random();
-            int sor = vel.Next(0, 8);
-            int oszlop = vel.Next(0, 8);
-
-            if (T[sor,oszlop] == '#')
+           
+            for (int i = 0; i < N; i++)
             {
+                int sor = vel.Next(0, 8);
+                int oszlop = vel.Next(0, 8);
+
+                while (T[sor, oszlop] == 'K')
+                {
+                    sor = vel.Next(0, 8);
+                    oszlop = vel.Next(0, 8);
+                }
                 T[sor, oszlop] = 'K';
             }
-
-            T[sor, oszlop] = 'K';
-        }
+         }
         public void FajlbaIr()
         {
 
@@ -81,15 +85,15 @@ namespace Kiralyno
             Console.WriteLine("Üres tábla:");
 
             t.Megjelenit();
-            t.Elhelyez();
+            t.Elhelyez(8);
             Console.WriteLine();
             t.Megjelenit();
             
-            Console.Write("Kérem a királynők (K) számát: ");
-            int ch= int.Parse(Console.ReadLine());
+            /*Console.Write("Kérem a királynők (K) számát: ");
+            char ch= char.Parse(Console.ReadLine());
             Tabla kiralyno = new Tabla(ch);
 
-            Console.Write(kiralyno.Elhelyez());
+            Console.Write(kiralyno.Elhelyez());*/
 
             Console.ReadKey();
 
