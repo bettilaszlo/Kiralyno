@@ -69,27 +69,34 @@ namespace Kiralyno
 
         public bool UresOszlop(int oszlop)
         {
-                while (oszlop == 'K')
-                {
-                    if ()
-                    {
+                 bool x = true;
 
-                    }
+            for (int i = 0; i < 8; i++)
+            {
+                if (T[i, oszlop] == 'K')
+                {
+                    x = false;
+                    break;
                 }
-                
-            
+            }
+            return x;
         }
 
         public bool UresSor(int sor)
         {
-                while (sor == 'K')
-                {
-                    if ()
-                    {
+                bool x = true;
 
-                    }
+            for (int i = 0; i < 8; i++)
+            {
+                if (T[sor, i] == 'K')
+                {
+                    x = false;
+                    break;
                 }
-            
+            }
+
+            return x;
+        }
         }
     }
     class Program
@@ -113,6 +120,28 @@ namespace Kiralyno
             Tabla kiralyno = new Tabla(ch);
 
             Console.Write(kiralyno.Elhelyez());*/
+            
+            
+             Console.Write("Oszlop:");
+            int ures_oszlop = int.Parse(Console.ReadLine());
+            if (t.UresOszlop(ures_oszlop)==true)
+            {
+                Console.WriteLine("Ez az oszlop üres");
+            }
+            else
+            {
+                Console.WriteLine("Ez az oszlop nem üres");
+            }
+            Console.Write("Sor:");
+            int ures_sor = int.Parse(Console.ReadLine());
+            if (t.UresSor(ures_sor)==true)
+            {
+                Console.WriteLine("Ez a sor üres");
+            }
+            else
+            {
+                Console.WriteLine("Ez a sor nem üres");
+            }
 
             Console.ReadKey();
 
