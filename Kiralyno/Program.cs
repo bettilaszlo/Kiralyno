@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -66,14 +67,29 @@ namespace Kiralyno
             }
         }
 
-        public int UresOszlop()
+        public bool UresOszlop(int oszlop)
         {
-            return 0;
+                while (oszlop == 'K')
+                {
+                    if ()
+                    {
+
+                    }
+                }
+                
+            
         }
 
-        public int UresSor()
+        public bool UresSor(int sor)
         {
-            return 0;
+                while (sor == 'K')
+                {
+                    if ()
+                    {
+
+                    }
+                }
+            
         }
     }
     class Program
@@ -88,6 +104,8 @@ namespace Kiralyno
             t.Elhelyez(8);
             Console.WriteLine();
             t.Megjelenit();
+            
+
 
             
             /*Console.Write("Kérem a királynők (K) számát: ");
