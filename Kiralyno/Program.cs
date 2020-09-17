@@ -88,6 +88,7 @@ namespace Kiralyno
             t.Elhelyez(8);
             Console.WriteLine();
             t.Megjelenit();
+
             
             /*Console.Write("Kérem a királynők (K) számát: ");
             char ch= char.Parse(Console.ReadLine());
