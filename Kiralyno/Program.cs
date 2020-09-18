@@ -10,7 +10,7 @@ namespace Kiralyno
 {
     class Tabla
     {
-        private char[,] T = new char[8,8]; 
+        private char[,] T = new char[8, 8];
         private char UresCella;
         private int UresOszlopokSzama;
         private int UresSorokSzama;
@@ -24,7 +24,7 @@ namespace Kiralyno
             //                 HA üres ---> "#"
 
             Random vel = new Random();
-           
+
             for (int i = 0; i < N; i++)
             {
                 int sor = vel.Next(0, 8);
@@ -37,7 +37,7 @@ namespace Kiralyno
                 }
                 T[sor, oszlop] = 'K';
             }
-         }
+        }
         public void FajlbaIr()
         {
 
@@ -69,34 +69,44 @@ namespace Kiralyno
 
         public bool UresOszlop(int oszlop)
         {
-                 bool x = true;
+            int x = 0;
 
-            for (int i = 0; i < 8; i++)
+            while (x < 8 && T[x, oszlop] != 'K')
             {
-                if (T[i, oszlop] == 'K')
-                {
-                    x = false;
-                    break;
-                }
+                x++;
             }
-            return x;
+
+            if (x < 8)
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+
+
         }
 
         public bool UresSor(int sor)
         {
-                bool x = true;
+            int x = 0;
 
-            for (int i = 0; i < 8; i++)
+            while (x < 8 && T[sor, x] != 'K')
             {
-                if (T[sor, i] == 'K')
-                {
-                    x = false;
-                    break;
-                }
+                x++;
             }
 
-            return x;
-        }
+            if (x < 8)
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
         }
     }
     class Program
@@ -111,20 +121,11 @@ namespace Kiralyno
             t.Elhelyez(8);
             Console.WriteLine();
             t.Megjelenit();
-            
 
-
-            
-            /*Console.Write("Kérem a királynők (K) számát: ");
-            char ch= char.Parse(Console.ReadLine());
-            Tabla kiralyno = new Tabla(ch);
-
-            Console.Write(kiralyno.Elhelyez());*/
-            
-            
-             Console.Write("Oszlop:");
+            Console.Write("Oszlop:");
             int ures_oszlop = int.Parse(Console.ReadLine());
-            if (t.UresOszlop(ures_oszlop)==true)
+
+            if (t.UresOszlop(ures_oszlop))
             {
                 Console.WriteLine("Ez az oszlop üres");
             }
@@ -132,9 +133,11 @@ namespace Kiralyno
             {
                 Console.WriteLine("Ez az oszlop nem üres");
             }
+
             Console.Write("Sor:");
             int ures_sor = int.Parse(Console.ReadLine());
-            if (t.UresSor(ures_sor)==true)
+
+            if (t.UresSor(ures_sor))
             {
                 Console.WriteLine("Ez a sor üres");
             }
