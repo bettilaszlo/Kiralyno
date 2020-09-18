@@ -117,10 +117,12 @@ namespace Kiralyno
             Tabla t = new Tabla('#');
             Console.WriteLine("Üres tábla:");
 
+
             t.Megjelenit();
             t.Elhelyez(8);
             Console.WriteLine();
             t.Megjelenit();
+
 
             Console.Write("Oszlop:");
             int ures_oszlop = int.Parse(Console.ReadLine());
@@ -146,6 +148,24 @@ namespace Kiralyno
                 Console.WriteLine("Ez a sor nem üres");
             }
 
+            Console.WriteLine("Az üres oszlopok és sorok száma:");
+            int uresSor = 0;
+            int uresOszlop = 0;
+
+            for (int i = 0; i < 8; i++)
+            {
+                if (t.UresOszlop(i))
+                {
+                    uresOszlop++;  
+                }
+                if (t.UresSor(i))
+                {
+                    uresSor++;  
+                }
+            }
+
+            Console.WriteLine("Oszlopok: {0}", uresOszlop);
+            Console.WriteLine("Sorok: {0}", uresSor);
             Console.ReadKey();
 
         }
